@@ -1,18 +1,17 @@
 import React, { Component } from "react";
 import { Container, Button, Table } from "reactstrap";
 import { v4 as uuid } from "uuid";
+import { connect } from "react-redux";
+import { getItems } from "../actions/itemActions";
+import PropTypes from "prop-types";
 
 class ShoppingList extends Component {
-  state = {
-    items: [
-      { id: uuid(), name: "Ägg 6p", price: 18, amount: 2 },
-      { id: uuid(), name: "Bröd", price: 24 },
-      { id: uuid(), name: "Mjölk 1,5L", price: 15, amount: 2 }
-    ]
-  };
+  componentDidMount() {
+    this.props.getItems();
+  }
 
   render() {
-    const { items } = this.state;
+    const { items } = this.props.item;
 
     return (
       <Container>
@@ -30,7 +29,7 @@ class ShoppingList extends Component {
             }
           }}
         >
-          Add item
+          Lägg till vara
         </Button>
 
         <Table borderless>
@@ -71,4 +70,13 @@ class ShoppingList extends Component {
   }
 }
 
-export default ShoppingList;
+ShoppingList.protoTypes = {
+  getItems: PropTypes.func.isRequired,
+  item: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  item: state.item
+});
+
+export default connect(mapStateToProps, { getItems })(ShoppingList);
