@@ -10,8 +10,8 @@ class ShoppingList extends Component {
     this.props.getItems();
   }
 
-  onDeleteClick = id => {
-    this.props.deleteItem(id);
+  onDeleteClick = _id => {
+    this.props.deleteItem(_id);
   };
 
   render() {
@@ -23,23 +23,23 @@ class ShoppingList extends Component {
           <thead>
             <tr>
               <th>Namn</th>
-              <th>Pris</th>
               <th>Antal</th>
+              <th>Pris</th>
               <th></th>
             </tr>
           </thead>
           <tbody>
-            {items.map(({ id, name, price, amount }) => (
-              <tr key={id}>
+            {items.map(({ _id, name, price, amount }) => (
+              <tr key={_id}>
                 <th>{name}</th>
-                <th>{price}</th>
                 <th>{amount}</th>
+                <th>{price * amount}</th>
                 <th>
                   <Button
-                    className="remove-btn"
+                    className="remove-btn float-right"
                     color="danger"
                     size="sm"
-                    onClick={this.onDeleteClick.bind(this, id)}
+                    onClick={this.onDeleteClick.bind(this, _id)}
                   >
                     &times;
                   </Button>

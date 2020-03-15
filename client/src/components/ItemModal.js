@@ -13,8 +13,6 @@ import {
 import { connect } from "react-redux";
 import { addItem } from "../actions/itemActions";
 
-import { v4 as uuid } from "uuid";
-
 class ItemModal extends Component {
   state = { modal: false, name: "", price: 0, amount: 1 };
 
@@ -32,7 +30,6 @@ class ItemModal extends Component {
     e.preventDefault();
 
     const newItem = {
-      id: uuid(),
       name: this.state.name,
       price: this.state.price,
       amount: this.state.amount
@@ -47,11 +44,7 @@ class ItemModal extends Component {
   render() {
     return (
       <div>
-        <Button
-          color="dark"
-          style={{ marginBottom: "2rem" }}
-          onClick={this.toggle}
-        >
+        <Button color="dark" className="float-right" onClick={this.toggle}>
           Lägg till vara
         </Button>
 
@@ -72,7 +65,7 @@ class ItemModal extends Component {
                 ></Input>
               </FormGroup>
               <FormGroup>
-                <Label for="price">pris</Label>
+                <Label for="price">Pris</Label>
                 <Input
                   type="number"
                   name="price"
@@ -87,7 +80,7 @@ class ItemModal extends Component {
                   type="number"
                   name="amount"
                   id="amount"
-                  placeholder="1"
+                  defaultValue="1"
                   onChange={this.onChange}
                 ></Input>
                 <Button color="dark" style={{ marginTop: "2rem" }} block>
