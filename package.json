@@ -1,0 +1,37 @@
+{
+  "name": "mernstack",
+  "version": "1.0.0",
+  "description": "A showcase application build with React & Redux along with a Node.js & MongoDB building a JSON formatted API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandermasud/MERNStack.git"
+  },
+  "keywords": [
+    "Node.js",
+    "React",
+    "Redux",
+    "Express",
+    "MongoDB",
+    "JSON"
+  ],
+  "author": "Alexander Masud",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexandermasud/MERNStack/issues"
+  },
+  "homepage": "https://github.com/alexandermasud/MERNStack#readme",
+  "dependencies": {
+    "body-parser": "1.18.3",
+    "concurrently": "3.6.0",
+    "express": "4.16.3",
+    "mongoose": "^5.9.4"
+  },
+  "devDependencies": {
+    "nodemon": "1.17.5"
+  }
+}
