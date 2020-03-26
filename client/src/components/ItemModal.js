@@ -58,7 +58,7 @@ class ItemModal extends Component {
                   type="text"
                   name="name"
                   id="item"
-                  placeholder="Lägg till vara"
+                  placeholder="Namn"
                   onChange={this.onChange}
                 ></Input>
               </FormGroup>
@@ -68,7 +68,7 @@ class ItemModal extends Component {
                   type="number"
                   name="price"
                   id="price"
-                  placeholder="Lägg till pris (frivilligt)"
+                  placeholder="Pris (frivilligt)"
                   onChange={this.onChange}
                 ></Input>
               </FormGroup>
