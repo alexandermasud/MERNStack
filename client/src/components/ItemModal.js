@@ -82,7 +82,7 @@ class ItemModal extends Component {
                   onChange={this.onChange}
                 ></Input>
                 <Button color="dark" style={{ marginTop: "2rem" }} block>
-                  Lägg till vara
+                  Lägg till
                 </Button>
               </FormGroup>
             </Form>
