@@ -26,12 +26,12 @@ class AppNavbar extends Component {
       <div>
         <Navbar color="light" light expand="sm" className="mb-5">
           <Container>
-            <NavbarBrand href="/">Shoppinglista</NavbarBrand>
+            <NavbarBrand href="/">letsList</NavbarBrand>
             <NavbarToggler onClick={this.toggle}></NavbarToggler>
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <NavLink href="https://github.com/alexandermasud/MERNStack">
+                  <NavLink href="https://github.com/alexandermasud/letsList">
                     Github
                   </NavLink>
                 </NavItem>

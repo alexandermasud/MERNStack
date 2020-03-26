@@ -1,6 +1,6 @@
 {
-  "name": "mernstack",
-  "version": "1.0.0",
+  "name": "letslist",
+  "version": "1.0.1",
   "description": "A showcase application build with React & Redux along with a Node.js & MongoDB building a JSON formatted API",
   "main": "server.js",
   "scripts": {
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexandermasud/MERNStack.git"
+    "url": "git+https://github.com/alexandermasud/letsList.git"
   },
   "keywords": [
     "Node.js",
@@ -26,9 +26,9 @@
   "author": "Alexander Masud",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/alexandermasud/MERNStack/issues"
+    "url": "https://github.com/alexandermasud/letsList/issues"
   },
-  "homepage": "https://github.com/alexandermasud/MERNStack#readme",
+  "homepage": "https://github.com/alexandermasud/letsList#readme",
   "dependencies": {
     "body-parser": "1.18.3",
     "concurrently": "3.6.0",
